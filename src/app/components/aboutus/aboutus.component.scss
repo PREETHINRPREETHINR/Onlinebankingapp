@@ -1,0 +1,123 @@
+.aboutus-container {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url('/bankimg.png'); /* ✅ use same background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Navbar - same style */
+  .navbar {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .nav-left {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+  }
+  
+  .nav-left .bank-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-right: 35px;
+    padding-left: 50px;
+  }
+  
+  .nav-left a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav-left a:hover {
+    color: #ffd700;
+  }
+  
+  /* Main About Us Content */
+  .aboutus-content {
+    text-align: center;
+    padding: 40px;
+    margin: 40px auto 0;
+    border-radius: 12px;
+    max-width: 900px;
+    color: white;
+  }
+  
+  .aboutus-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+  }
+  
+  .about-description {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+  }
+  
+  .vision-mission-section {
+    display: flex;
+    // flex-direction: row; /* 👉 side by side */
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    flex-wrap: wrap; /* ✅ Allows wrapping on small screens */
+  }
+  
+  .vision, .mission {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 12px;
+    flex: 1 1 400px; /* ✅ Flex-grow, flex-shrink, flex-basis */
+    max-width: 450px; /* ✅ To control width */
+    min-height: 250px; /* ✅ Make cards look even */
+  }
+  
+  
+  .vision h2, .mission h2 {
+    font-size: 2rem;
+    color: #ffd700;
+    margin-bottom: 15px;
+  }
+  
+  .vision p, .mission p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .aboutus-content h1 {
+      font-size: 2.5rem;
+    }
+  
+    .about-description {
+      font-size: 1.2rem;
+    }
+  
+    .vision h2, .mission h2 {
+      font-size: 1.5rem;
+    }
+  
+    .vision p, .mission p {
+      font-size: 1rem;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  }
+  

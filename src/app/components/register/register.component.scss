@@ -1,5 +1,12 @@
 .register-container {
-  background: linear-gradient(to bottom right, #0a0f2c, #2b3c6b, #4682b4); /* Matching login background */
+  //background: linear-gradient(to bottom right, #0a0f2c, #2b3c6b, #4682b4); /* Matching login background */
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/bankimg.png'); /* ✅ Ensure correct path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -8,11 +15,11 @@
 }
 
 .form-box {
-  background: rgba(255, 255, 255, 0.92); /* Slightly transparent white */
+  background: rgba(0, 0, 0, 0.17); /* Slightly transparent white */
   padding: 40px;
   border-radius: 12px;
   width: 500px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 20px rgba(196, 214, 199, 0.4);
   backdrop-filter: blur(8px);
 }
 
@@ -20,7 +27,7 @@ h2 {
   text-align: center;
   color: #0d6efd;
   margin-bottom: 25px;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: bold;
 }
 
@@ -62,12 +69,12 @@ h2 {
   background-color: #0b5ed7;
 }
 
-.login-link {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 15px;
-  color: #333;
-}
+// .login-link {
+//   text-align: center;
+//   margin-top: 20px;
+//   font-size: 15px;
+//   color:white;
+// }
 
 .login-link a {
   color: #198754; /* Green for 'Sign In' link */
@@ -83,7 +90,7 @@ h2 {
   text-align: center;
   margin-top: 20px;
   font-size: 15px;
-  color: black; /* default color for text */
+  color: white; /* default color for text */
 }
 
 .acoount .back-link {

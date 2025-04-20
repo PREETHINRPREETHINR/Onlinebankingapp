@@ -7,6 +7,7 @@ import { DashboarduiComponent } from './components/dashboardui/dashboardui.compo
 import { AccountaddComponent } from './components/accountadd/accountadd.component';
 import { PaymentHistoryComponent } from './components/paymenthistory/paymenthistory.component';
 import { TransactionHistoryComponent } from './components/transactionhistory/transactionhistory.component';
+import { AboutusComponent } from './components/aboutus/aboutus.component';
 
 
 
@@ -23,6 +24,10 @@ export const routes: Routes = [
     { 
         path: 'home', 
         component: HomeComponent
+    },
+    { 
+        path: 'aboutus', 
+        component: AboutusComponent
     },
     {
         path:'dashboardui',

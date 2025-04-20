@@ -1,5 +1,12 @@
 .login-container {
-  background: linear-gradient(to bottom right, #0a0f2c, #2b3c6b, #4682b4); /* Dark to light blue gradient */
+  // background: linear-gradient(to bottom right, #0a0f2c, #2b3c6b, #4682b4); /* Dark to light blue gradient */
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/bankimg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -8,18 +15,20 @@
 }
 
 .form-box {
-  background: rgba(255, 255, 255, 0.9); /* Slightly less transparent for better contrast */
+  background: rgba(0, 0, 0, 0.17);
+  /* Slightly less transparent for better contrast */
   padding: 40px;
   padding-right: 65px;
   border-radius: 12px;
   width: 400px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 20px rgba(196, 214, 199, 0.4);
   backdrop-filter: blur(8px);
 }
 
 h2 {
   text-align: center;
-  color: #0d6efd; /* Bootstrap blue */
+  color: #0d6efd;
+  /* Bootstrap blue */
   margin-bottom: 25px;
   font-size: 28px;
   font-weight: bold;
@@ -41,7 +50,8 @@ h2 {
 .login-btn {
   width: 107%;
   padding: 14px;
-  background-color: #0d6efd; /* Bright blue like login button */
+  background-color: #0d6efd;
+  /* Bright blue like login button */
   border: none;
   color: white;
   font-weight: bold;
@@ -60,11 +70,12 @@ h2 {
   text-align: center;
   margin-top: 20px;
   font-size: 15px;
-  color: #333;
+  color: white;
 }
 
 .register-link a {
-  color: #0d6efd; /* Green for 'Register' link */
+  color: #0d6efd;
+  /* Green for 'Register' link */
   text-decoration: none;
   font-weight: bold;
 }
