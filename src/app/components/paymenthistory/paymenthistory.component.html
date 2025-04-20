@@ -1,0 +1,54 @@
+<div class="dashboard-container">
+
+    <!-- Top Navbar -->
+    <nav class="navbar">
+      <div class="nav-left">
+        <span class="bank-name">Easy-Way Bank</span>
+        <a routerLink="/accountadd">Dashboard</a>
+        <a routerLink="/paymenthistory">Payment History</a>
+        <a routerLink="/transactionhistory">Transactions History</a>
+      </div>
+  
+      <div class="nav-right">
+        <span class="status-indicator"></span>
+        <span class="welcome-message">Welcome: Sam Davis</span>
+        <a class="signout" routerLink="/home">Sign Out</a>
+      </div>
+    </nav>
+  
+    <!-- Center Card -->
+    <div class="card">
+      <h2>Payment History</h2>
+  
+      <table class="payment-table">
+        <thead>
+          <tr>
+            <th>Record Number</th>
+            <th>Beneficiary</th>
+            <th>Beneficiary Account Number</th>
+            <th>Amount</th>
+            <th>Status</th>
+            <th>Reference</th>
+            <th>Reason Code</th>
+            <th>Created at</th>
+          </tr>
+        </thead>
+  
+        <tbody>
+          <tr *ngFor="let payment of paymentHistory">
+            <td>{{ payment.recordNumber }}</td>
+            <td>{{ payment.beneficiary }}</td>
+            <td>{{ payment.beneficiaryAccountNumber }}</td>
+            <td>{{ payment.amount }}</td>
+            <td>{{ payment.status }}</td>
+            <td>{{ payment.reference }}</td>
+            <td>{{ payment.reasonCode }}</td>
+            <td>{{ payment.createdAt }}</td>
+          </tr>
+        </tbody>
+      </table>
+  
+    </div>
+  
+  </div>
+  

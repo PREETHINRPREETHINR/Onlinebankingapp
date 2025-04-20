@@ -1,0 +1,48 @@
+<div class="transaction-history-container">
+  <nav class="navbar">
+    <div class="nav-left">
+      <span class="bank-name">Easy-Way Bank</span>
+      <a routerLink="/accountadd">Dashboard</a>
+      <a routerLink="/paymenthistory">Payment History</a>
+      <a routerLink="/transactionhistory">Transactions History</a>
+    </div>
+
+    <div class="nav-right">
+      <span class="status-indicator"></span>
+      <span class="welcome-message">Welcome: Sam Davis</span>
+      <a class="signout" routerLink="/home">Sign Out</a>
+    </div>
+  </nav>
+    <div class="table-container">
+      
+      <table>
+        <thead>
+          <tr>
+            <th>Transaction ID</th>
+            <th>Account Name</th>
+            <th>Transaction Type</th>
+            <th>Amount</th>
+            <th>Source</th>
+            <th>Status</th>
+            <th>Reason Code</th>
+            <th>Created at</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngForm="let txn of transactions">
+            <td>{{ txn.id }}</td>
+            <td>{{ txn.accountName }}</td>
+            <td>{{ txn.type }}</td>
+            <td>{{ txn.amount }}</td>
+            <td>{{ txn.source }}</td>
+            <td [ngClass]="{'success': txn.status === 'success', 'failed': txn.status === 'failed'}">
+              {{ txn.status }}
+            </td>
+            <td>{{ txn.reason }}</td>
+            <td>{{ txn.createdAt }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

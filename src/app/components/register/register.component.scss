@@ -1,0 +1,103 @@
+.register-container {
+  background: linear-gradient(to bottom right, #0a0f2c, #2b3c6b, #4682b4); /* Matching login background */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.form-box {
+  background: rgba(255, 255, 255, 0.92); /* Slightly transparent white */
+  padding: 40px;
+  border-radius: 12px;
+  width: 500px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+}
+
+h2 {
+  text-align: center;
+  color: #0d6efd;
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+}
+
+.input-group.single {
+  flex-direction: column;
+}
+
+.register-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #0d6efd; /* Blue button like Login */
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 6px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.register-btn:hover {
+  background-color: #0b5ed7;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 15px;
+  color: #333;
+}
+
+.login-link a {
+  color: #198754; /* Green for 'Sign In' link */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+.acoount {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 15px;
+  color: black; /* default color for text */
+}
+
+.acoount .back-link {
+  background: none;
+  border: none;
+  color: #0d6efd; /* blue color for login button */
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 5px; /* small gap between text and button */
+}
+
+.acoount .back-link i {
+  margin-right: 5px;
+}
+
