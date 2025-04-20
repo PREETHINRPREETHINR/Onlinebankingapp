@@ -117,7 +117,7 @@
   right: -455px;
   width: 400px;
   height: 100%;
-  background: white;
+  background: rgb(5, 29, 163);
   box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
   padding: 1.5rem;
   transition: right 0.3s ease;
@@ -141,7 +141,7 @@
   h3 {
     margin: 0;
     font-size: 1.7rem;
-    color: #6a11cb;
+    color: #ffffff;
   }
 
   .close-btn {
@@ -149,7 +149,7 @@
     border: none;
     font-size: 2rem;
     cursor: pointer;
-    color: #666;
+    color: #ffffff;
     transition: color 0.3s ease;
 
     &:hover {
@@ -171,7 +171,7 @@
       font-weight: 500;
       margin-top: 1rem;
       margin-bottom: 0.5rem;
-      color: #333;
+      color: #ffffff;
     }
 
     input, select {
@@ -183,7 +183,7 @@
     }
 
     button[type="submit"] {
-      background: linear-gradient(to right, #6a11cb, #2575fc);
+      background:#e64a19;
       color: white;
       border: none;
       padding: 0.8rem 1.5rem;
@@ -197,7 +197,7 @@
       }
 
       &:disabled {
-        background-color: #ccc;
+        background-color: #e64a19;
         cursor: not-allowed;
       }
     }

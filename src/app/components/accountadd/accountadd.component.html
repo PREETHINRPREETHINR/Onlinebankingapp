@@ -25,7 +25,7 @@
     <div class="card">
   
       <div class="card-header">
-        <button (click)="toggleCanvas()" class="add-account-btn">
+        <button (click)="toggleCanvas()" class="add-account-btn" routerLink="">
           <span>➕</span> Add an Account
         </button>
       </div>
@@ -45,6 +45,38 @@
       </div>
   
     </div>
+    <!-- ✅ Off-canvas Panel for Transactions -->
+<div class="offcanvas" [class.show]="showCanvas">
+  <div class="offcanvas-header">
+    <h3>Transact</h3>
+    <button (click)="toggleCanvas()" class="close-btn">✖</button>
+  </div>
+
+  <div class="offcanvas-body">
+    <h4>Make a Transfer</h4>
+
+    <label>Transfer From</label>
+    <select [(ngModel)]="transferFrom" class="form-control">
+      <option *ngFor="let acc of accounts" [value]="acc.name">{{ acc.name }}</option>
+    </select>
+    <small>This is the account the amount will be deducted from</small>
+
+    <label>Transfer To</label>
+    <select [(ngModel)]="transferTo" class="form-control">
+      <option value="">-- Select Account --</option>
+      <option *ngFor="let acc of accounts" [value]="acc.name" [disabled]="acc.name === transferFrom">
+        {{ acc.name }}
+      </option>
+    </select>
+    <small>This is the account the amount will be transferred to</small>
+
+    <label>Enter Amount</label>
+    <input type="number" [(ngModel)]="transferAmount" placeholder="Enter Transfer Amount.." class="form-control" />
+
+    <button class="transfer-btn" (click)="makeTransfer()">Transfer</button>
+  </div>
+</div>
+
   
   </div>
   

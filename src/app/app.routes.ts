@@ -8,6 +8,7 @@ import { AccountaddComponent } from './components/accountadd/accountadd.componen
 import { PaymentHistoryComponent } from './components/paymenthistory/paymenthistory.component';
 import { TransactionHistoryComponent } from './components/transactionhistory/transactionhistory.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
+import { ContactusComponent } from './components/contactus/contactus.component';
 
 
 
@@ -28,6 +29,10 @@ export const routes: Routes = [
     { 
         path: 'aboutus', 
         component: AboutusComponent
+    },
+    { 
+        path: 'contactus', 
+        component: ContactusComponent
     },
     {
         path:'dashboardui',

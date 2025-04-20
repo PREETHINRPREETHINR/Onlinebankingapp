@@ -1,0 +1,129 @@
+.contactus-container {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url('/bankimg.png'); /* Same background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Navbar - same */
+  .navbar {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .nav-left {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+  }
+  
+  .nav-left .bank-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-right: 35px;
+    padding-left: 50px;
+  }
+  
+  .nav-left a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav-left a:hover {
+    color: #ffd700;
+  }
+  
+  /* Main Contact Us Content */
+  .contactus-content {
+    text-align: center;
+    padding: 40px;
+    margin: 40px auto 0;
+    border-radius: 12px;
+    max-width: 900px;
+    color: white;
+  }
+  
+  .contactus-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+  }
+  
+  .contact-description {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+  }
+  
+  /* Contact Form */
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .contact-form button {
+    background-color: #1d098e;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #480972;
+  }
+  
+  /* Contact Information */
+  .contact-info {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .contact-info p {
+    margin: 10px 0;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .contactus-content h1 {
+      font-size: 2.5rem;
+    }
+  
+    .contact-description {
+      font-size: 1.2rem;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  }
+  
