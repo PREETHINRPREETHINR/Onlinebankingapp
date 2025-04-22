@@ -24,9 +24,10 @@
   <!-- Main Card -->
   <div class="card">
     <div class="card-header">
-      <button class="add-account-btn" routerLink="['/dashboardui']" [queryParams]="{ openCanvas: true }">
+      <a class="add-account-btn" [routerLink]="['/dashboardui']" [queryParams]="{ openCanvas: true }">
         <span>➕</span> Add an Account
-      </button>
+      </a>
+      
     </div>
 
     <div class="card-body">
