@@ -7,7 +7,6 @@
       <a routerLink="/accountadd">Dashboard</a>
       <a routerLink="/paymenthistory">Payment History</a>
       <a routerLink="/transactionhistory">Transactions History</a>
-      <!-- <a routerLink="/transactionhistory">Transactions History</a> -->
     </div>
 
     <div class="nav-right">
@@ -37,9 +36,29 @@
 
     <div class="offcanvas-body">
       <form (ngSubmit)="submitAccountForm()" #accountForm="ngForm">
+        
+        <!-- Account Holder Name -->
         <label>Account Holder Name</label>
         <input type="text" [(ngModel)]="account.name" name="name" required>
 
+        <!-- Gender -->
+        <label>Gender</label>
+        <select [(ngModel)]="account.gender" name="gender" required>
+          <option value="">Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <!-- Date of Birth -->
+        <label>Date of Birth</label>
+        <input type="date" [(ngModel)]="account.dob" name="dob" required>
+
+        <!-- Phone Number -->
+        <label>Phone Number</label>
+        <input type="tel" [(ngModel)]="account.phone" name="phone" required pattern="[0-9]{10}" placeholder="Enter 10-digit phone number">
+
+        <!-- Account Type -->
         <label>Account Type</label>
         <select [(ngModel)]="account.type" name="type" required>
           <option value="">Select Type</option>
@@ -47,6 +66,7 @@
           <option value="Current">Current</option>
         </select>
 
+        <!-- Initial Deposit -->
         <label>Initial Deposit</label>
         <input type="number" [(ngModel)]="account.deposit" name="deposit" required>
 

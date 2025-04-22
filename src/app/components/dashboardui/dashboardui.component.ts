@@ -11,7 +11,7 @@
 // }
 
 
-import { Component, OnInit } from '@angular/core';  // <<< ✅ import OnInit here
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
@@ -23,15 +23,20 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './dashboardui.component.html',
   styleUrls: ['./dashboardui.component.scss']
 })
-export class DashboarduiComponent implements OnInit {  // <<< ✅ implements OnInit here
+export class DashboarduiComponent implements OnInit {
 
   showCanvas = false;
 
   account = {
     name: '',
+    gender: '',
+    dob: '',
+    phone: '',
     type: '',
     deposit: null
   };
+
+  accountsList: any[] = [];   // ✅ Store created accounts if you want to show later
 
   constructor(private route: ActivatedRoute) {}
 
@@ -48,11 +53,25 @@ export class DashboarduiComponent implements OnInit {  // <<< ✅ implements OnI
   }
 
   submitAccountForm() {
-    if (this.account.name && this.account.type && this.account.deposit != null) {
-      console.log('Account Created:', this.account);
+    if (this.account.name && this.account.gender && this.account.dob && this.account.phone && this.account.type && this.account.deposit != null) {
+      console.log('✅ Account Created:', this.account);
+
+      // Add to accounts list
+      this.accountsList.push({ ...this.account });
 
       this.toggleCanvas();
-      this.account = { name: '', type: '', deposit: null };
+
+      // Reset form fields
+      this.account = {
+        name: '',
+        gender: '',
+        dob: '',
+        phone: '',
+        type: '',
+        deposit: null
+      };
+    } else {
+      alert('Please fill all the fields correctly.');
     }
   }
 }

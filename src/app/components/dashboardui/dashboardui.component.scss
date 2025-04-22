@@ -1,6 +1,6 @@
 .dashboard-container {
   min-height: 100vh;
-  background: linear-gradient(to bottom right, #0a0f2c, #2b3c6b, #4682b4);// Same as login page gradient
+  background: linear-gradient(to bottom right, #0a0f2c, #2b3c6b, #4682b4);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,14 +10,14 @@
 
 .navbar {
   width: 100%;
-  background: linear-gradient( to right, #1d10ad, #0929a7);// Same gradient
+  background: linear-gradient(to right, #1d10ad, #0929a7);
   color: white;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .nav-left {
@@ -84,7 +84,7 @@
 
   h2 {
     font-size: 2rem;
-    color: #6a11cb; /* Match the gradient start color */
+    color: #6a11cb;
     margin-bottom: 1.2rem;
   }
 
@@ -169,21 +169,22 @@
     label {
       font-size: 1rem;
       font-weight: 500;
-      margin-top: 1rem;
+      margin-top: 0rem;
       margin-bottom: 0.5rem;
       color: #ffffff;
     }
 
-    input, select {
-      padding: 0.7rem;
+    input,
+    select {
+      padding: 0.5rem;
       font-size: 1rem;
-      border-radius: 8px;
+      border-radius: 6px;
       border: 1px solid #ccc;
       margin-bottom: 1.2rem;
     }
 
     button[type="submit"] {
-      background:#e64a19;
+      background: #e64a19;
       color: white;
       border: none;
       padding: 0.8rem 1.5rem;
