@@ -1,226 +1,280 @@
+/* ===== Dashboard Container ===== */
 .dashboard-container {
-  min-height: 100vh;
-  background: linear-gradient(to bottom right, #0a0f2c, #2b3c6b, #4682b4);// Same as login page gradient
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-sizing: border-box;
-  overflow-x: hidden;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #0a0f2c, #2b3c6b, #4682b4);
+    /* Gradient like login */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
+/* ===== Navbar ===== */
 .navbar {
-  width: 100%;
-  background: linear-gradient( to right, #1d10ad, #0929a7);// Same gradient
-  color: white;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-sizing: border-box;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    width: 100%;
+    background: linear-gradient(to right, #1d10ad, #0929a7);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .nav-left {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
 
-  a {
+.nav-left a {
     color: white;
     text-decoration: none;
     font-weight: 500;
     font-size: 1rem;
     transition: color 0.3s ease;
+}
 
-    &:hover {
-      color: #d1e0ff;
-    }
-  }
+.nav-left a:hover {
+    color: #d1e0ff;
+}
 
-  .bank-name {
+.bank-name {
     font-weight: bold;
     font-size: 1.8rem;
-  }
 }
 
 .nav-right {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
 
-  .status-indicator {
+.status-indicator {
     width: 10px;
     height: 10px;
     background-color: limegreen;
     border-radius: 50%;
-  }
+}
 
-  .welcome-message {
+.welcome-message {
     font-size: 1rem;
     font-weight: 500;
-  }
+}
 
-  .signout {
+.signout {
     color: white;
     text-decoration: none;
     font-weight: bold;
     cursor: pointer;
     transition: color 0.3s ease;
-
-    &:hover {
-      color: #ffcccb;
-    }
-  }
 }
 
+.signout:hover {
+    color: #ffcccb;
+}
+
+/* ===== Success Message ===== */
 .success-message {
-  background-color: #d4edda;
-  color: #155724;
-  padding: 12px;
-  margin: 20px 0;
-  border-radius: 8px;
-  width: 100%;
-  text-align: center;
-  font-weight: 600;
-  max-width: 800px;
+    background-color: #d4edda;
+    color: #155724;
+    padding: 12px;
+    margin: 20px 0;
+    border-radius: 8px;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    max-width: 800px;
 }
 
+/* ===== Card ===== */
 .card {
-  background: white;
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  margin-top: 2rem;
-  width: 100%;
-  max-width: 800px;
-  box-sizing: border-box;
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
 }
 
 .card-header {
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
 }
 
 .add-account-btn {
-  background-color: white;
-  border: 1px solid #007bff;
-  color: #007bff;
-  font-weight: 600;
-  font-size: 1rem;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: all 0.3s ease;
+    background-color: white;
+    border: 1px solid #007bff;
+    color: #007bff;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
 
-  &:hover {
+.add-account-btn:hover {
     background-color: #e6f0ff;
-  }
 }
 
 .card-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h2 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-  color: #0a0f2c;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #0a0f2c;
 }
 
 .balance {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin: 10px 0 30px 0;
-  color: #1d10ad;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 10px 0 30px 0;
+    color: #1d10ad;
 }
 
-
+/* ===== Account Dropdown ===== */
 .account-dropdown {
-  width: 100%;
-  padding: 12px;
-  font-size: 16px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
 }
 
+/* ===== Transact Button ===== */
 .transact-btn {
-  background-color: #f0ad4e;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
+    background-color: #f0ad4e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
 
-  &:hover {
+.transact-btn:hover {
     background-color: #ec971f;
-  }
 }
+
+/* Offcanvas styles */
 .offcanvas {
-  position: fixed;
-  top: 0;
-  left: -400px;
-  width: 350px;
-  height: 100vh;
-  background-color: #064f9d;
-  color: white;
-  padding: 20px;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
-  transition: left 0.3s ease-in-out;
-  z-index: 1050;
-  overflow-y: auto;
+    // position: fixed;
+    // top: 0;
+    // left: -300px; /* Hide by default */
+    // width: 255px;
+    // height: 100%;
+    // background: rgb(5, 29, 163); /* Blue background */
+    // color: white;
+    // overflow-y: auto;
+    // transition: left 0.3s ease;
+    // z-index: 1050;
+    // padding: 20px;
+    // box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    right: -455px;
+    width: 366px;
+    height: 100%;
+    background: rgb(5, 29, 163);
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    color: white;
 }
 
-.offcanvas.show {
-  left: 0;
+/* Show when open */
+.offcanvas.open {
+    left: 0;
 }
 
+/* Offcanvas header */
 .offcanvas-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    font-size: 1.7rem;
+    color: #ffffff;
 }
 
-.offcanvas-body {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
 
-.form-control {
-  padding: 10px;
-  border-radius: 4px;
-  border: none;
-  font-size: 1rem;
-}
-
-.transfer-btn {
-  padding: 10px 15px;
-  background-color: #ff5722;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.transfer-btn:hover {
-  background: linear-gradient(to right, #5a0fb3, #1e63e7)
-}
-
+/* Close button */
 .close-btn {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  color: white;
-  cursor: pointer;
+    background:transparent;
+    border:none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #ffffff;
+    transition:color 0.3s ease;
+    &:hover {
+        color: #000;
+      }
+}
+
+/* Form controls */
+.offcanvas select,
+.offcanvas input,
+.offcanvas button {
+    width: 95%;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Special button inside offcanvas */
+.offcanvas button.transfer-btn {
+    background-color: #ffc107;
+    color: black;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Transact button */
+.transact-btn {
+    margin-top: 20px;
+    background-color: #ffc107;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Top navbar */
+.navbar {
+    background: #0d6efd;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left a,
+.nav-right a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
 }

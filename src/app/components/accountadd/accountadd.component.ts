@@ -1,39 +1,3 @@
-// import { Component } from '@angular/core';
-// import { FormsModule } from '@angular/forms';   // <<< ✅ import this
-// import { RouterLink } from '@angular/router';
-
-
-// @Component({
-//   selector: 'app-accountadd',
-//   standalone: true, 
-//   imports: [FormsModule,RouterLink],
-//   templateUrl: './accountadd.component.html',
-//   styleUrl: './accountadd.component.scss'
-// })
-// export class AccountaddComponent {
-//   accountAddedSuccess: boolean = true;
-
-//   accounts = [
-//     { name: 'Olive Distributers' }
-//     // You can push new accounts dynamically after creation
-//   ];
-
-//   selectedAccount: string = this.accounts[0]?.name || '';
-//   totalBalance: number = 0.00;
-
-//   showCanvas: boolean = false;
-
-//   toggleCanvas() {
-//     this.showCanvas = !this.showCanvas;
-//   }
-
-//   onTransact() {
-//     // Redirect to transaction page
-//     console.log('Start transaction for', this.selectedAccount);
-//     // You can use router.navigate here
-//   }
-
-// }
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -50,47 +14,83 @@ export class AccountaddComponent {
 
   accountAddedSuccess: boolean = true;
 
+  // List of accounts
   accounts = [
-    { name: 'Olive Distributers' },
-    { name: 'Sams Bakery' },            // ✅ Added more accounts for demo
+    { name: 'Olive Distributors' },
+    { name: 'Sams Bakery' },
     { name: 'Quick Foods' }
   ];
 
-  selectedAccount: string = this.accounts[0]?.name || '';
+  selectedAccount: string = this.accounts.length > 0 ? this.accounts[0].name : '';
   totalBalance: number = 700.00;
 
-  // ✅ For off-canvas toggle and form values
-  showCanvas: boolean = false;
-  transferFrom: string = this.accounts[0]?.name || '';
+  // For toggling transact offcanvas
+  isTransactOpen: boolean = false;
+
+  // Transaction fields
+  selectedTransactionType: string = '';
+
+  transferFrom: string = this.selectedAccount;
   transferTo: string = '';
   transferAmount: number | null = null;
+  payeeName: string = '';
 
-  toggleCanvas() {
-    this.showCanvas = !this.showCanvas;
+  // Toggle transact offcanvas
+  toggleTransact(): void {
+    this.isTransactOpen = !this.isTransactOpen;
   }
 
-  onTransact() {
-    this.toggleCanvas(); // ✅ Show the canvas when Transact button is clicked
-  }
-
-  makeTransfer() {
+  makeTransfer(): void {
     if (!this.transferFrom || !this.transferTo || !this.transferAmount) {
-      alert("Please fill out all fields.");
+      alert("⚠️ Please fill all fields for Transfer.");
       return;
     }
 
     if (this.transferFrom === this.transferTo) {
-      alert("Transfer From and To must be different.");
+      alert("⚠️ 'Transfer From' and 'Transfer To' must be different accounts.");
       return;
     }
 
-    // Your real transfer logic can go here
-    console.log(`✅ Transfer ₹${this.transferAmount} from ${this.transferFrom} to ${this.transferTo}`);
+    console.log(`✅ Transferred ₹${this.transferAmount} from ${this.transferFrom} to ${this.transferTo}`);
+    this.resetTransaction();
+  }
 
-    // Reset and close the canvas
+  makePayment(): void {
+    if (!this.transferFrom || !this.payeeName || !this.transferAmount) {
+      alert("⚠️ Please fill all fields for Payment.");
+      return;
+    }
+
+    console.log(`✅ Payment of ₹${this.transferAmount} made from ${this.transferFrom} to ${this.payeeName}`);
+    this.resetTransaction();
+  }
+
+  makeDeposit(): void {
+    if (!this.transferTo || !this.transferAmount) {
+      alert("⚠️ Please fill all fields for Deposit.");
+      return;
+    }
+
+    console.log(`✅ Deposited ₹${this.transferAmount} to ${this.transferTo}`);
+    this.resetTransaction();
+  }
+
+  makeWithdraw(): void {
+    if (!this.transferFrom || !this.transferAmount) {
+      alert("⚠️ Please fill all fields for Withdrawal.");
+      return;
+    }
+
+    console.log(`✅ Withdrawn ₹${this.transferAmount} from ${this.transferFrom}`);
+    this.resetTransaction();
+  }
+
+  resetTransaction(): void {
     this.transferAmount = null;
+    this.transferFrom = this.selectedAccount;
     this.transferTo = '';
-    this.toggleCanvas();
+    this.payeeName = '';
+    this.selectedTransactionType = '';
+    this.isTransactOpen = false;
   }
 }
-

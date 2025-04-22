@@ -11,18 +11,19 @@
 // }
 
 
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';   // <<< ✅ import this
+import { Component, OnInit } from '@angular/core';  // <<< ✅ import OnInit here
+import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
-  standalone: true,   // <<< ✅ tell Angular this is a standalone component
-  imports: [FormsModule,RouterLink],  // <<< ✅ add FormsModule here
+  standalone: true,
+  imports: [FormsModule, RouterLink],
   templateUrl: './dashboardui.component.html',
   styleUrls: ['./dashboardui.component.scss']
 })
-export class DashboarduiComponent {
+export class DashboarduiComponent implements OnInit {  // <<< ✅ implements OnInit here
 
   showCanvas = false;
 
@@ -32,6 +33,16 @@ export class DashboarduiComponent {
     deposit: null
   };
 
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      if (params['openCanvas']) {
+        this.showCanvas = true;
+      }
+    });
+  }
+
   toggleCanvas() {
     this.showCanvas = !this.showCanvas;
   }
@@ -40,10 +51,7 @@ export class DashboarduiComponent {
     if (this.account.name && this.account.type && this.account.deposit != null) {
       console.log('Account Created:', this.account);
 
-      // Close the offcanvas
       this.toggleCanvas();
-
-      // Reset the form
       this.account = { name: '', type: '', deposit: null };
     }
   }

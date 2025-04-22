@@ -76,12 +76,12 @@
   }
   
   .vision, .mission {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(85, 97, 161, 0.6);
     padding: 20px;
     border-radius: 12px;
-    flex: 1 1 400px; /* ✅ Flex-grow, flex-shrink, flex-basis */
-    max-width: 450px; /* ✅ To control width */
-    min-height: 250px; /* ✅ Make cards look even */
+    flex: 1 ; /* ✅ Flex-grow, flex-shrink, flex-basis */
+    max-width: 485px; /* ✅ To control width */
+    min-height: 200px; /* ✅ Make cards look even */
   }
   
   

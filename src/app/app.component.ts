@@ -6,10 +6,10 @@ import { AccountaddComponent } from './components/accountadd/accountadd.componen
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,HomeComponent],
+  imports: [RouterOutlet],
   template: `
     <!-- <h1>Welcome to {{title}}!</h1> -->
-    <app-home/>
+    <!-- <app-home/> -->
     <!-- <app-dashboard/>
     <app-accountadd/> -->
     <router-outlet />
